@@ -21,22 +21,6 @@
   box-sizing: border-box;
 }
 
-*::-webkit-scrollbar {
-  width: 0.5rem;
-}
-
-*::-webkit-scrollbar-track {
-  margin: 0.5rem 0;
-}
-
-*::-webkit-scrollbar-thumb {
-  margin: 0.25rem;
-
-  background-color: theme("colors.multi-primary-base");
-
-  border-radius: 1.25rem;
-}
-
 body {
   color: var(--foreground);
   background: var(--background);

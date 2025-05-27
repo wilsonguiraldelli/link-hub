@@ -1,21 +1,22 @@
-"use client";
+import Image from "next/image";
 
-import { signIn } from "next-auth/react";
+import Logo from "@images/logo.png";
+import { Paper } from "@mui/material";
 
-import { Button } from "@mui/material";
+import LoginForm from "../components/form";
 
 export default function LoginScreen() {
-  const handleLogin = async () => {
-    await signIn("credentials", {
-      redirect: true,
-      email: "admin@admin.com",
-      password: "12345",
-    });
-  };
-
   return (
-    <div className="flex items-center justify-center w-full h-screen">
-      <Button onClick={handleLogin}>Login</Button>
+    <div className="flex items-center justify-center w-full h-screen bg-neutral-50">
+      <Paper className="h-screen w-[400px] sm:h-auto pb-2 flex flex-col justify-center">
+        <div className="flex flex-col p-4 justify-center items-center">
+          <Image alt="Full logo" className="h-auto" src={Logo} width={280} />
+          <i className="text-sm text-text-secondary">
+            Link smart. Live simpler
+          </i>
+        </div>
+        <LoginForm />
+      </Paper>
     </div>
   );
 }

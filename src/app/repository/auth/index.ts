@@ -11,8 +11,8 @@ export class AuthRepository {
     this.serverHttpClient = serverHttpClient;
   }
 
-  login = async (credentials: TLoginCredentials) => {
-    console.log("CHEGOU", credentials);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  login = async (_credentials: TLoginCredentials) => {
     // Force delay
     later(1000);
 

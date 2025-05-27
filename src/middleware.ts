@@ -15,8 +15,6 @@ const middleware: NextMiddlewareWithAuth = async (req: NextRequestWithAuth) => {
     secret: process.env.NEXT_AUTH_SECRET,
   });
 
-  console.log("TOKEN", token);
-
   // User is Signed in and is trying to access `/login`.
   // Redirects to `/`.
   if (token && pathname.startsWith("/login")) {

@@ -11,37 +11,31 @@ const materialTheme = createTheme({
       dark: colors.primary.dark,
       main: colors.primary.base,
       light: colors.primary.light,
-      lighter: colors.primary.lightest,
     },
     secondary: {
       dark: colors.secondary.dark,
       main: colors.secondary.base,
       light: colors.secondary.light,
-      lighter: colors.secondary.lightest,
     },
     success: {
       dark: colors.success.dark,
       main: colors.success.base,
       light: colors.success.light,
-      lighter: colors.success.lightest,
     },
     error: {
       dark: colors.error.dark,
       main: colors.error.base,
       light: colors.error.light,
-      lighter: colors.error.lightest,
     },
     warning: {
       dark: colors.warning.dark,
       main: colors.warning.base,
       light: colors.warning.light,
-      lighter: colors.warning.lightest,
     },
     info: {
       dark: colors.info.dark,
       main: colors.info.base,
       light: colors.info.light,
-      lighter: colors.info.lightest,
     },
     text: {
       primary: colors.text.primary,
