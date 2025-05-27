@@ -1,0 +1,14 @@
+{
+  "login": {
+    "user": {
+      "id": "001",
+      "username": "admin.admin",
+      "email": "admin@admin.com",
+      "name": "Admin"
+    },
+    "authTokens": {
+      "accessToken": "123456",
+      "refreshToken": "78910"
+    }
+  }
+}
