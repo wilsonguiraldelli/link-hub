@@ -10,5 +10,18 @@
       "accessToken": "123456",
       "refreshToken": "78910"
     }
-  }
+  },
+  "links": [
+    {
+      "id": "001",
+      "links": [
+        {
+          "id": "880cf115-97f9-4b86-b521-2ab76ab70437",
+          "title": "Lindekin",
+          "url": "https://www.linkedin.com/in/wilsonguiraldelli/",
+          "active": true
+        }
+      ]
+    }
+  ]
 }

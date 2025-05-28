@@ -23,7 +23,6 @@ const fields: TFields = {
     label: "E-mail",
     inputProps: {
       fullWidth: true,
-      size: "small",
     },
   },
   password: {
@@ -31,7 +30,6 @@ const fields: TFields = {
     label: "Password",
     inputProps: {
       fullWidth: true,
-      size: "small",
       type: "password",
     },
   },

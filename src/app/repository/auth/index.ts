@@ -1,25 +1,27 @@
 import { later } from "@/app/utils";
-import { FetchHttpClient } from "@/services/http/fetchHttpClient";
-import type { IHttpClient } from "@/services/http/types";
 
 import type { TLoginCredentials, TLoginResponse } from "./types";
 
 export class AuthRepository {
-  private serverHttpClient: IHttpClient;
-
-  constructor(serverHttpClient: IHttpClient = new FetchHttpClient()) {
-    this.serverHttpClient = serverHttpClient;
-  }
-
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   login = async (_credentials: TLoginCredentials) => {
-    // Force delay
-    later(1000);
+    const url = `${process.env.NEXT_PUBLIC_API_BASE_URL || ""}/login`;
 
-    const url = `/login`;
-    const response = await this.serverHttpClient.get<TLoginResponse>(url);
+    const response = await fetch(url, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
 
-    return response;
+    if (!response.ok) {
+      throw new Error("Erro ao fazer login");
+    }
+
+    const data = await response.json();
+    later(1000); // force delay
+
+    return data as TLoginResponse;
   };
 }
 

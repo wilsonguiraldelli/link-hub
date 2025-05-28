@@ -10,8 +10,8 @@ import { Button, Grid2 } from "@mui/material";
 
 import useLogin from "../../hooks/useLogin";
 
-import fields from "./fields";
-import { loginSchema } from "./schema";
+import fields from "./loginForm.fields";
+import { loginSchema } from "./loginForm.schema";
 
 export default function LoginForm() {
   const { mutateAsync: onLogin } = useLogin();

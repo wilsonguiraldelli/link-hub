@@ -6,7 +6,7 @@ import type {
 } from "react-hook-form";
 import { Controller } from "react-hook-form";
 
-import { type InputBaseProps } from "@mui/material";
+import { FormControlLabel, type InputBaseProps, Switch } from "@mui/material";
 import { TextField } from "@mui/material";
 import type { TextFieldProps } from "@mui/material/TextField";
 
@@ -31,6 +31,7 @@ export const ControlledTextField = <T extends FieldValues>({
       name={name}
       render={({ field }) => (
         <TextField
+          size="small"
           {...field}
           {...props.inputProps}
           disabled={props.disabled}
@@ -42,3 +43,30 @@ export const ControlledTextField = <T extends FieldValues>({
     />
   );
 };
+
+type ISwitchProps<T extends FieldValues> = IProps<T>;
+
+export const ControlledSwitch = <T extends FieldValues>({
+  control,
+  name,
+  ...props
+}: ISwitchProps<T>) => (
+  <Controller
+    control={control}
+    name={name}
+    render={({ field }) => (
+      <FormControlLabel
+        control={
+          <Switch
+            checked={field.value}
+            defaultValue={field.value}
+            disabled={props.disabled}
+            key={field.value}
+            onChange={(_, checked) => field.onChange(checked)}
+          />
+        }
+        label={props.label}
+      />
+    )}
+  />
+);

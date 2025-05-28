@@ -9,6 +9,9 @@ export class AxiosHttpClient implements IHttpClient {
   constructor() {
     this.axiosInstance = axios.create({
       baseURL: process.env.NEXT_PUBLIC_API_BASE_URL,
+      headers: {
+        "Content-Type": "application/json",
+      },
     });
 
     this.axiosInstance.interceptors.request.use(async (request) => {
@@ -39,7 +42,11 @@ export class AxiosHttpClient implements IHttpClient {
     data: unknown,
     config?: AxiosRequestConfig,
   ): Promise<T> {
-    const response = await this.axiosInstance.put<T>(url, data, config);
+    const response = await this.axiosInstance.put<T>(
+      url,
+      JSON.stringify(data),
+      config,
+    );
     return response.data;
   }
 
