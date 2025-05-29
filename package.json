@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
+    "dev:db": "cd database/ && npx json-server db.json -p 3001",
+    "dev:all": "concurrently \"yarn dev\" \"yarn dev:db\"",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -48,6 +50,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@typescript-eslint/parser": "^8.23.0",
+    "concurrently": "^9.1.2",
     "eslint": "^9.19.0",
     "eslint-config-next": "15.1.6",
     "eslint-config-prettier": "^10.0.1",

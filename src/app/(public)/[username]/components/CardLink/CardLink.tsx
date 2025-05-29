@@ -10,7 +10,8 @@ type TProps = TLink & {
   color: string;
 };
 
-export default function CardLink({ title, url, color }: TProps) {
+export default function CardLink({ title, url, color, active }: TProps) {
+  if (!active) return;
   return (
     <Link href={url} target="_blank">
       <ButtonBase className="rounded-xl w-full">
