@@ -1,0 +1,32 @@
+{
+  "login": {
+    "user": {
+      "id": "001",
+      "email": "wilson.guiraldelli@outlook.com",
+      "name": "Wilson"
+    },
+    "authTokens": {
+      "accessToken": "123456",
+      "refreshToken": "78910"
+    }
+  },
+  "profile": [
+    {
+      "username": "wilsonguiraldelli",
+      "description": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
+      "id": "001",
+      "links": [
+        {
+          "id": "2b10b494-d4b6-4a08-a68b-535338d8dbad",
+          "title": "Linkedin",
+          "url": "https://www.linkedin.com/in/wilsonguiraldelli/",
+          "active": true
+        }
+      ],
+      "theme": {
+        "primary": "#5B2A9D",
+        "secondary": "#16A085"
+      }
+    }
+  ]
+}
