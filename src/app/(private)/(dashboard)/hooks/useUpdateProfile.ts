@@ -1,5 +1,5 @@
 import useSnackbar from "@/app/hooks/useSnackbar";
-import dashboardRepository from "@/app/repository/dashboard/dashboard";
+import dashboardRepository from "@/app/repository/dashboard";
 import { useMutation } from "@tanstack/react-query";
 
 export default function useUpdateProfile() {

@@ -53,6 +53,7 @@ export default function LoginForm() {
         </Grid2>
         <Grid2>
           <Button
+            className="rounded-full"
             disableElevation
             disabled={isLoading}
             fullWidth

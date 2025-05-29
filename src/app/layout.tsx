@@ -11,7 +11,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Next Boilerplate",
+  title: "Hubbio",
   description: "",
 };
 

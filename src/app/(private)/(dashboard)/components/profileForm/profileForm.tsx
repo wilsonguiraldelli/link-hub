@@ -1,9 +1,11 @@
 import { useCallback } from "react";
+import Link from "next/link";
 import { useForm } from "react-hook-form";
 
 import ControlledField from "@/app/components/controlledField";
 import type { TProfile } from "@/app/repository/dashboard/types";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { OpenInNew } from "@mui/icons-material";
 import { Button, Grid2 } from "@mui/material";
 
 import fields, { type TProfileInputs } from "./profileForm.fields";
@@ -19,6 +21,7 @@ export default function LinkForm({ onSave, profile, isLoading }: TProps) {
     control,
     formState: { errors },
     handleSubmit,
+    watch,
   } = useForm<TProfileInputs>({
     resolver: zodResolver(prorfileFormSchema),
 
@@ -53,7 +56,22 @@ export default function LinkForm({ onSave, profile, isLoading }: TProps) {
           <ControlledField.TextField {...register("description")} />
         </Grid2>
       </Grid2>
-      <div className="flex justify-end items-center w-full">
+      <div className="flex justify-end items-center w-full gap-4">
+        <Link href={`/${watch("username")}`} target="_blank">
+          <Button
+            className="rounded-full"
+            color="secondary"
+            disableElevation
+            disabled={isLoading}
+            loading={isLoading}
+            startIcon={<OpenInNew />}
+            style={{ textTransform: "none" }}
+            type="submit"
+            variant="outlined"
+          >
+            Open profile
+          </Button>
+        </Link>
         <Button
           className="rounded-full"
           color="secondary"

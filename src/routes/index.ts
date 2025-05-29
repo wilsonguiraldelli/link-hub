@@ -8,11 +8,14 @@ type TRoutePermission = {
 export const routePermissions: TRoutePermission[] = [
   {
     path: "/",
-    // permission: "home.view",
     type: "private",
   },
   {
     path: "/login",
+    type: "public",
+  },
+  {
+    path: "/[username]",
     type: "public",
   },
   {

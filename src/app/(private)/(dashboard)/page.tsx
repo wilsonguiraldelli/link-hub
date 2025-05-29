@@ -1,6 +1,6 @@
 import { getServerSession } from "next-auth";
 
-import dashboardRepository from "@/app/repository/dashboard/dashboard";
+import dashboardRepository from "@/app/repository/dashboard";
 import authOptions from "@config/nextAuth";
 
 import ProfileProvider from "./contexts/profileContext";
