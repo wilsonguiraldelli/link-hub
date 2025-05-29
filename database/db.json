@@ -2,8 +2,8 @@
   "login": {
     "user": {
       "id": "001",
-      "email": "admin@admin.com",
-      "name": "Admin"
+      "email": "wilson.guiraldelli@outlook.com",
+      "name": "Wilson"
     },
     "authTokens": {
       "accessToken": "123456",
@@ -12,24 +12,12 @@
   },
   "profile": [
     {
-      "username": "wilguiraldelli",
+      "username": "wilsonguiraldelli",
       "description": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
       "id": "001",
       "links": [
         {
           "id": "2b10b494-d4b6-4a08-a68b-535338d8dbad",
-          "title": "Linkedin",
-          "url": "https://www.linkedin.com/in/wilsonguiraldelli/",
-          "active": true
-        },
-        {
-          "id": "1b84a5e8-c446-482e-8e6c-46006cab5a9d",
-          "title": "Instagram",
-          "url": "https://www.instagram.com/wilguiraldelli/",
-          "active": true
-        },
-        {
-          "id": "2b10b494-d4b6-4a08-a68b-535338d8dba1",
           "title": "Linkedin",
           "url": "https://www.linkedin.com/in/wilsonguiraldelli/",
           "active": true

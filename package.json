@@ -2,6 +2,9 @@
   "name": "link-hub",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=18.17.0"
+  },
   "scripts": {
     "dev": "next dev --turbopack",
     "dev:db": "cd database/ && npx json-server db.json -p 3001",

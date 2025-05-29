@@ -61,8 +61,8 @@ export default {
 
 export const colorCombinations = [
   { primary: "#5B2A9D", secondary: "#16A085" },
-  { primary: "#3498db", secondary: "#e67e22" },
-  { primary: "#2ecc71", secondary: "#1abc9c" },
-  { primary: "#c0392b", secondary: "#f39c12" },
-  { primary: "#9b59b6", secondary: "#34495e" },
+  { primary: "#FF6B6B", secondary: "#FFF5F5" },
+  { primary: "#2F855A", secondary: "#F0FFF4" },
+  { primary: "#4C51BF", secondary: "#1A202C" },
+  { primary: "#F6AD55", secondary: "#FFFAF0" },
 ];
