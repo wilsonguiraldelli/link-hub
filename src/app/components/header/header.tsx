@@ -10,7 +10,7 @@ import LogoutButton from "./header.logout";
 export default function Header() {
   return (
     <AppBar color="inherit" elevation={3} position="sticky">
-      <Toolbar className="flex justify-between py-3">
+      <Toolbar className="flex justify-between py-3" data-testid="toolbar">
         <Link href="/">
           <Image
             alt="logo"

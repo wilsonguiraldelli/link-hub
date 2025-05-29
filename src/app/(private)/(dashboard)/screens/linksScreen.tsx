@@ -8,9 +8,9 @@ import { DragDropContext, Droppable, DropResult } from "@hello-pangea/dnd";
 import { Add } from "@mui/icons-material";
 import { Button } from "@mui/material";
 
+import CardLink from "../components/cardLink";
 import ConfirmationDeleteModal from "../components/confirmationDeleteModal";
 import EmptyLinks from "../components/emptyLinks";
-import Link from "../components/link";
 import LinkForm from "../components/linkForm";
 import useProfile from "../hooks/useProfile";
 import useUpdateProfile from "../hooks/useUpdateProfile";
@@ -129,7 +129,7 @@ export default function LinksScreen() {
                         className="flex flex-col gap-4"
                       >
                         {links.map((item, index) => (
-                          <Link
+                          <CardLink
                             active={item.active}
                             id={item?.id?.toString()}
                             index={index}

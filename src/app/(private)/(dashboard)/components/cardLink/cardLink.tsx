@@ -13,7 +13,7 @@ type TProps = TLink & {
   active: boolean;
 };
 
-export default function Link({
+export default function CardLink({
   title,
   url,
   id,

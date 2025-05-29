@@ -51,9 +51,18 @@ export default function LinkForm({ onSave, profile, isLoading }: TProps) {
       <Grid2 className="w-full" container spacing={2}>
         <Grid2 size={{ xs: 12, sm: 12, md: 12, lg: 12 }}>
           <ControlledField.TextField {...register("username")} />
+          <p className="text-red-500 text-sm mt-1" data-testid="username-error">
+            {errors.username?.message}
+          </p>
         </Grid2>
         <Grid2 size={{ xs: 12, sm: 12, md: 12, lg: 12 }}>
           <ControlledField.TextField {...register("description")} />
+          <p
+            className="text-red-500 text-sm mt-1"
+            data-testid="description-error"
+          >
+            {errors.description?.message}
+          </p>
         </Grid2>
       </Grid2>
       <div className="flex justify-end items-center w-full gap-4">

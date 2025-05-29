@@ -91,9 +91,15 @@ export default function LinkForm({
           </Grid2>
           <Grid2 size={{ xs: 12, sm: 12, md: 12, lg: 12 }}>
             <ControlledField.TextField {...register("title")} />
+            <p className="text-red-500 text-sm mt-1" data-testid="title-error">
+              {errors.title?.message}
+            </p>
           </Grid2>
           <Grid2 size={{ xs: 12, sm: 12, md: 12, lg: 12 }}>
             <ControlledField.TextField {...register("url")} />
+            <p className="text-red-500 text-sm mt-1" data-testid="url-error">
+              {errors.url?.message}
+            </p>
           </Grid2>
         </Grid2>
       </DialogContent>
