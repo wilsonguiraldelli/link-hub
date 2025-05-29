@@ -1,7 +1,7 @@
 import { z } from "zod";
 
 export const linkFormSchema = z.object({
-  title: z.string({ required_error: "Please inform a title" }),
+  title: z.string().min(3, { message: "Please inform a title" }),
   url: z
     .string()
     .url({ message: "Please inform a valid url" })

@@ -2,7 +2,6 @@
   "login": {
     "user": {
       "id": "001",
-      "username": "admin.admin",
       "email": "admin@admin.com",
       "name": "Admin"
     },
@@ -11,17 +10,16 @@
       "refreshToken": "78910"
     }
   },
-  "links": [
+  "profile": [
     {
+      "username": "wilguiraldelli",
+      "description": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
       "id": "001",
-      "links": [
-        {
-          "id": "880cf115-97f9-4b86-b521-2ab76ab70437",
-          "title": "Lindekin",
-          "url": "https://www.linkedin.com/in/wilsonguiraldelli/",
-          "active": true
-        }
-      ]
+      "links": [],
+      "theme": {
+        "primary": "#3498db",
+        "secondary": "#e67e22"
+      }
     }
   ]
 }

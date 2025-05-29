@@ -14,7 +14,7 @@ import fields from "./loginForm.fields";
 import { loginSchema } from "./loginForm.schema";
 
 export default function LoginForm() {
-  const { mutateAsync: onLogin } = useLogin();
+  const { mutateAsync: onLogin, isLoading } = useLogin();
   const {
     control,
     formState: { errors },
@@ -54,7 +54,9 @@ export default function LoginForm() {
         <Grid2>
           <Button
             disableElevation
+            disabled={isLoading}
             fullWidth
+            loading={isLoading}
             onClick={handleSubmit(onSubmit)}
             style={{ textTransform: "none" }}
             variant="contained"

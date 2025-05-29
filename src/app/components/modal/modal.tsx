@@ -54,7 +54,7 @@ const CancelButton = (props: PropsWithChildren<ButtonProps>) => (
     {...props}
     className={twMerge(
       "rounded-full normal-case text-base font-medium h-10",
-      !props.disabled && "border-error-lightest text-error-lightest",
+      !props.disabled && "border-error-light text-error-light",
     )}
     loadingPosition="end"
     variant="outlined"
@@ -65,10 +65,8 @@ const ConfirmButton = (props: PropsWithChildren<ButtonProps>) => (
   <Button
     {...props}
     className={twMerge(
-      "rounded-full normal-case text-base font-medium h-10 text-white",
-      props.disabled
-        ? "border-primary-lighter bg-secondary-lighter"
-        : "border-secondary-base bg-secondary-base",
+      "rounded-full normal-case text-base font-medium h-10",
+      !props.disabled && "border-secondary-base text-secondary-base",
     )}
     loadingPosition="end"
     variant="outlined"

@@ -8,6 +8,7 @@ export default {
     dark: "#3B1766",
     base: "#5B2A9D",
     light: "#B97DCE",
+    lightest: "#F3EBF6",
   },
   secondary: {
     dark: "#12806A",
@@ -57,3 +58,11 @@ export default {
     secondary: "#B0B0B0",
   },
 };
+
+export const colorCombinations = [
+  { primary: "#5B2A9D", secondary: "#16A085" },
+  { primary: "#3498db", secondary: "#e67e22" },
+  { primary: "#2ecc71", secondary: "#1abc9c" },
+  { primary: "#c0392b", secondary: "#f39c12" },
+  { primary: "#9b59b6", secondary: "#34495e" },
+];

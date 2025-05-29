@@ -46,7 +46,6 @@ const nextAuthOptions: NextAuthOptions = {
             id: user.id,
             name: user.name ?? "",
             email: user.email ?? "",
-            username: user.username ?? "",
           },
           authTokens: user.authTokens,
           iat: token.iat,
@@ -61,7 +60,6 @@ const nextAuthOptions: NextAuthOptions = {
         id: token.user.id,
         name: token.user.name,
         email: token.user.email,
-        username: token.user.username,
       };
 
       session.authTokens = token.authTokens;

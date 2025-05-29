@@ -22,8 +22,15 @@ type TProps = {
   onClose: VoidFunction;
   onSave: (values: TLink) => void;
   link?: TLink;
+  isLoading: boolean;
 };
-export default function LinkForm({ open, onClose, onSave, link }: TProps) {
+export default function LinkForm({
+  open,
+  onClose,
+  onSave,
+  link,
+  isLoading,
+}: TProps) {
   const {
     control,
     formState: { errors },
@@ -95,6 +102,8 @@ export default function LinkForm({ open, onClose, onSave, link }: TProps) {
           className="rounded-full"
           color="secondary"
           disableElevation
+          disabled={isLoading}
+          loading={isLoading}
           onClick={handleSubmit(onSubmit)}
           style={{ textTransform: "none" }}
           type="submit"

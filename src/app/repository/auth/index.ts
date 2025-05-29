@@ -19,7 +19,7 @@ export class AuthRepository {
     }
 
     const data = await response.json();
-    later(1000); // force delay
+    await later(); // force delay
 
     return data as TLoginResponse;
   };

@@ -2,7 +2,6 @@ export type TUser = {
   id: string;
   name: string;
   email: string;
-  username: string;
 };
 
 export type TAuthTokens = {

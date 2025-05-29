@@ -2,11 +2,11 @@ import useSnackbar from "@/app/hooks/useSnackbar";
 import dashboardRepository from "@/app/repository/dashboard/dashboard";
 import { useMutation } from "@tanstack/react-query";
 
-export default function useUpdateLinks() {
+export default function useUpdateProfile() {
   const { setSnack } = useSnackbar();
 
   return useMutation({
-    mutationFn: dashboardRepository.putLinks,
+    mutationFn: dashboardRepository.putProfile,
     onError: () => {
       setSnack({
         message: "An error has occurred. Please try again later",
@@ -16,7 +16,7 @@ export default function useUpdateLinks() {
     },
     onSuccess: () => {
       setSnack({
-        message: "Links updated successfully!",
+        message: "Profile updated successfully!",
         open: true,
         color: "success",
       });

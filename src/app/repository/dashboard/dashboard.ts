@@ -3,7 +3,7 @@ import { AxiosHttpClient } from "@/services/http/axiosHttpClient";
 import { FetchHttpClient } from "@/services/http/fetchHttpClient";
 import type { IHttpClient } from "@/services/http/types";
 
-import type { TLink, TLinksResponse } from "./types";
+import type { TProfile, TProfileResponse } from "./types";
 
 export class DashboardRepository {
   private serverHttpClient: IHttpClient;
@@ -17,20 +17,19 @@ export class DashboardRepository {
     this.clientHttpClient = clientHttpClient;
   }
 
-  getLinks = async (userId?: string) => {
-    later(1000); // force delay
+  getProfile = async (userId?: string) => {
+    await later(); // force delay
 
-    const url = `/links/${userId}`;
-    const response = await this.serverHttpClient.get<TLinksResponse>(url);
-    return response.links;
+    const url = `/profile/${userId}`;
+    const response = await this.serverHttpClient.get<TProfileResponse>(url);
+    return response;
   };
 
-  putLinks = async ({ userId, links }: { userId: string; links: TLink[] }) => {
-    const url = `/links/${userId}`;
-    await this.clientHttpClient.put(url, {
-      id: userId,
-      links,
-    });
+  putProfile = async (profile: TProfile) => {
+    await later(); // force delay
+
+    const url = `/profile/${profile.id}`;
+    await this.clientHttpClient.put(url, profile);
   };
 }
 

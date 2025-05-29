@@ -18,27 +18,28 @@ const config: Config = {
 
         "primary-dark": colors.primary.dark,
         "primary-base": colors.primary.base,
-        "primary-lightest": colors.primary.light,
+        "primary-light": colors.primary.light,
+        "primary-lightest": colors.primary.lightest,
 
         "secondary-dark": colors.secondary.dark,
         "secondary-base": colors.secondary.base,
-        "secondary-lightest": colors.secondary.light,
+        "secondary-light": colors.secondary.light,
 
         "support-dark": colors.support.dark,
         "support-base": colors.support.base,
-        "support-lightest": colors.support.light,
+        "support-light": colors.support.light,
 
         "success-dark": colors.success.dark,
         "success-base": colors.success.base,
-        "success-lightest": colors.success.light,
+        "success-light": colors.success.light,
 
         "error-dark": colors.error.dark,
         "error-base": colors.error.base,
-        "error-lightest": colors.error.light,
+        "error-light": colors.error.light,
 
         "warning-dark": colors.warning.dark,
         "warning-base": colors.warning.base,
-        "warning-lightest": colors.warning.light,
+        "warning-light": colors.warning.light,
 
         "neutral-950": colors.neutral[950],
         "neutral-900": colors.neutral[900],
